@@ -3,7 +3,8 @@
 **MIS student · Future data analyst**
 
 <!-- Mission 3: put your photo on the line below. -->
-(Your photo goes here.)
+<img width="200" alt="儿童时代2" src="https://github.com/user-attachments/assets/0d6c9bdc-c367-4089-b962-5495049675ec" />
+
 
 ## About me
 
