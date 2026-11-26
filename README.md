@@ -1,6 +1,6 @@
-# Hi, I'm (your name) 👋
+# Hi, I'm Yushan
 
-**(Your major) student · Future data analyst**
+**MIS student · Future data analyst**
 
 <!-- Mission 3: put your photo on the line below. -->
 (Your photo goes here.)
@@ -8,7 +8,7 @@
 ## About me
 
 <!-- Mission 1: replace the line below with 2 or 3 sentences about you. -->
-(Write two or three sentences about yourself: what you study, what you enjoy, and the job you would like one day.)
+Haha
 
 ## My skills
 
