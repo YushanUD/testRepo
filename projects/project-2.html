@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can a Team of Trees Beat One Tree? | My Portfolio</title>
+  <style>
+    :root {
+      --background: #f5f7fa;
+      --surface: #ffffff;
+      --primary: #23395d;
+      --accent: #4f7cac;
+      --text: #263445;
+      --muted: #66758a;
+      --border: #e3e9f0;
+      --shadow: 0 5px 18px rgba(35, 57, 93, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(900px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 42px 0 48px;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: #dce8f5;
+      text-decoration: none;
+      font-size: 0.95rem;
+      margin-bottom: 30px;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      max-width: 750px;
+    }
+
+    main {
+      padding: 42px 0 65px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      color: var(--primary);
+      font-size: 1.12rem;
+      margin-bottom: 12px;
+      font-weight: 650;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .tools {
+      grid-column: 1 / -1;
+    }
+
+    .tool-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #edf3f9;
+      color: var(--primary);
+      border: 1px solid #dce7f2;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 22px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 30px 0 36px;
+      }
+
+      main {
+        padding: 28px 0 45px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .tools {
+        grid-column: auto;
+      }
+
+      .card {
+        padding: 21px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a class="back-link" href="../index.html">← Back to my portfolio</a>
+      <h1>Can a Team of Trees Beat One Tree?</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="project-grid">
+
+      <section class="card">
+        <h2>The Business Question</h2>
+        <p>Can we predict customer churn more accurately than with a single decision tree?</p>
+      </section>
+
+      <section class="card">
+        <h2>What I Did</h2>
+        <p>I trained a random forest: hundreds of decision trees that each vote, and the majority wins.</p>
+      </section>
+
+      <section class="card">
+        <h2>What I Found</h2>
+        <p>The forest was more accurate on new customers than one tree, because the trees' mistakes cancel out.</p>
+      </section>
+
+      <section class="card">
+        <h2>Why It Matters</h2>
+        <p>Better predictions mean the company calls the right customers and wastes less money.</p>
+      </section>
+
+      <section class="card tools">
+        <h2>Tools</h2>
+        <div class="tool-tags">
+          <span class="tag">Python</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">RandomForestClassifier</span>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      Can a Team of Trees Beat One Tree?
+    </div>
+  </footer>
+
+</body>
+</html>
