@@ -11,17 +11,7 @@
 <!-- Mission 1: replace the line below with 2 or 3 sentences about you. -->
 Haha
 
-## My skills
 
-<!-- Mission 1: change each number. 1 = just starting, 5 = expert. -->
-
-| Skill | My level (1–5) |
-| --- | --- |
-| Excel | 3 |
-| Python | 1 |
-| Data visualization | 2 |
-| Machine learning | 1 |
-| Presenting to a team | 3 |
 
 ## My projects
 
