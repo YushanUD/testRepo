@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yushan Liu — Business Analytics, Information Technology, and Data Analysis.">
+  <title>Yushan Liu | Business Analytics Portfolio</title>
+  <style>
+    :root {
+      --navy: #18334b;
+      --blue: #527b91;
+      --accent: #b8d0d8;
+      --background: #f5f7f8;
+      --surface: #ffffff;
+      --text: #283746;
+      --muted: #687887;
+      --border: #e3e9ed;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+    nav {
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-inner {
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 750;
+      font-size: 1.15rem;
+      color: var(--navy);
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    /* Hero */
+    header {
+      background: linear-gradient(130deg, #18334b, #31566c);
+      color: white;
+      padding: 90px 0;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 55px;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .eyebrow {
+      color: #c0d8df;
+      font-size: 0.85rem;
+      font-weight: 650;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 400;
+      color: #d5e2e8;
+      line-height: 1.5;
+      max-width: 650px;
+    }
+
+    .hero-location {
+      margin-top: 22px;
+      color: #c0d0d9;
+      font-size: 0.95rem;
+    }
+
+    .profile-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(255,255,255,0.75);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+      flex-shrink: 0;
+    }
+
+    /* Sections */
+    section {
+      padding: 75px 0;
+      scroll-margin-top: 65px;
+    }
+
+    section:nth-of-type(even) {
+      background: var(--surface);
+    }
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: 1.85rem;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .heading-line {
+      height: 3px;
+      width: 45px;
+      background: var(--blue);
+      margin-top: 13px;
+      border-radius: 5px;
+    }
+
+    /* About */
+    .about-text {
+      max-width: 850px;
+      font-size: 1.08rem;
+      color: #536574;
+      line-height: 1.95;
+    }
+
+    /* Experience and education */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 175px 1fr;
+      gap: 30px;
+      padding: 27px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(28,52,72,0.07);
+    }
+
+    .date {
+      color: var(--blue);
+      font-size: 0.9rem;
+      font-weight: 650;
+    }
+
+    .timeline-item h3 {
+      color: var(--navy);
+      font-size: 1.12rem;
+      margin-bottom: 5px;
+    }
+
+    .organization {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .timeline-item ul {
+      padding-left: 20px;
+      color: #536574;
+      font-size: 0.94rem;
+    }
+
+    .timeline-item li {
+      margin-bottom: 7px;
+    }
+
+    .location {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* Skills */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill-tag {
+      padding: 9px 17px;
+      background: #e8eff2;
+      border: 1px solid #d5e1e6;
+      color: var(--navy);
+      border-radius: 25px;
+      font-size: 0.92rem;
+      font-weight: 550;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      display: block;
+      padding: 30px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: all 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--blue);
+      box-shadow: 0 12px 30px rgba(24,51,75,0.09);
+    }
+
+    .project-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: #e8eff2;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .project-card h3 {
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 9px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--blue);
+      font-size: 0.9rem;
+      font-weight: 650;
+    }
+
+    /* Contact */
+    #contact {
+      background: #eaf0f3;
+      text-align: center;
+    }
+
+    #contact .section-heading {
+      margin-bottom: 20px;
+    }
+
+    .contact-text {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .linkedin-link {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 6px;
+      background: var(--navy);
+      color: white;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .linkedin-link:hover {
+      background: var(--blue);
+    }
+
+    footer {
+      background: var(--navy);
+      color: #c0d0d9;
+      padding: 22px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        flex-direction: column;
+        padding: 13px 0;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 13px;
+        font-size: 0.8rem;
+      }
+
+      header {
+        padding: 60px 0;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 28px;
+      }
+
+      .profile-photo {
+        width: 165px;
+        height: 165px;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 22px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="brand">YUSHAN LIU</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="container hero">
+      <div class="hero-content">
+        <div class="eyebrow">Professional Portfolio</div>
+        <h1>Yushan Liu, PhD</h1>
+        <h2>Business Analytics | Operations | Information Technology</h2>
+        <p class="hero-location">University of Delaware · Newark, Delaware</p>
+      </div>
+
+      <img
+        class="profile-photo"
+        src="https://github.com/user-attachments/assets/0d6c9bdc-c367-4089-b962-5495049675ec"
+        alt="Yushan Liu"
+      >
+    </div>
+  </header>
+
+  <!-- About Me -->
+  <section id="about">
+    <div class="container">
+      <div class="section-heading">
+        <h2>About Me</h2>
+        <div class="heading-line"></div>
+      </div>
+
+      <p class="about-text">
+        I hold a Ph.D. in Business Technology Management from Concordia
+        University and currently serve as an Assistant Professor at the
+        University of Delaware. My professional background combines
+        business technology management, academic research, and engineering
+        experience. Previously, I designed C++-based machine vision systems
+        and managed the development and testing of automated equipment
+        for rocket measurement applications.
+      </p>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Experience</h2>
+        <p>Academic and professional experience</p>
+        <div class="heading-line"></div>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="date">Aug 2024 – Present</div>
+          <div>
+            <h3>Assistant Professor</h3>
+            <p class="organization">University of Delaware</p>
+            <p class="location">Newark, Delaware, USA</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="date">Aug 2023 – Aug 2024</div>
+          <div>
+            <h3>Visiting Assistant Professor</h3>
+            <p class="organization">State University of New York at Plattsburgh</p>
+            <p class="location">Plattsburgh, New York, USA</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="date">Sep 2020 – Dec 2022</div>
+          <div>
+            <h3>Part-Time Lecturer</h3>
+            <p class="organization">Concordia University</p>
+            <p class="location">Montreal, Canada</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="date">Jul 2010 – Mar 2015</div>
+          <div>
+            <h3>Electronic Engineer & Project Manager</h3>
+            <p class="organization">Beijing Institute of Space Launch Technology</p>
+            <p class="location">Beijing, China</p>
+            <ul>
+              <li>
+                Independently designed a C++ machine vision system to capture,
+                optimize, recognize, track, and predict collimator window
+                images and motion, achieving an accuracy rate above 99.9%.
+              </li>
+              <li>
+                Coordinated the research, development, manufacturing, and
+                testing of an automated rocket collimator machine based
+                on the software.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Education</h2>
+        <p>Academic background</p>
+        <div class="heading-line"></div>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="date">May 2023</div>
+          <div>
+            <h3>Ph.D. in Business Technology Management / Management Information Systems</h3>
+            <p class="organization">Concordia University</p>
+            <p class="location">Montreal, Canada · GPA: 3.71</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="date">July 2010</div>
+          <div>
+            <h3>M.Eng. in Optical Engineering</h3>
+            <p class="organization">Beijing Institute of Technology</p>
+            <p class="location">Beijing, China · GPA: 3.76</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="date">June 2008</div>
+          <div>
+            <h3>B.Eng. in Electronic Science & Technology</h3>
+            <p class="organization">Beijing Institute of Technology</p>
+            <p class="location">Beijing, China · GPA: 4.0</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Skills & Expertise</h2>
+        <div class="heading-line"></div>
+      </div>
+
+      <div class="skills-container">
+        <span class="skill-tag">Business Technology Management</span>
+        <span class="skill-tag">Management Information Systems</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">Machine Vision</span>
+        <span class="skill-tag">Image Recognition</span>
+        <span class="skill-tag">Automated Systems</span>
+        <span class="skill-tag">Engineering Project Management</span>
+        <span class="skill-tag">Human-Computer Negotiation Research</span>
+        <span class="skill-tag">Experimental Research</span>
+        <span class="skill-tag">Systematic Evaluation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-heading">
+        <h2>My Projects</h2>
+        <p>Explore my project work</p>
+        <div class="heading-line"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <a href="projects/project-1.html" class="project-card">
+          <div class="project-icon">01</div>
+          <h3>My First Project</h3>
+          <p>Explore my first project and its details.</p>
+          <span class="project-link">View Project →</span>
+        </a>
+
+        <a href="projects/project-2.html" class="project-card">
+          <div class="project-icon">02</div>
+          <h3>My Second Project</h3>
+          <p>Explore my second project and its details.</p>
+          <span class="project-link">View Project →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Contact</h2>
+        <div class="heading-line" style="margin: 13px auto 0;"></div>
+      </div>
+
+      <p class="contact-text">
+        Connect with me on LinkedIn.
+      </p>
+
+      <a
+        class="linkedin-link"
+        href="https://www.linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn Profile ↗
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© Yushan Liu · Professional Portfolio</p>
+  </footer>
+
+</body>
+</html>
