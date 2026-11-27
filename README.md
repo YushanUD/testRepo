@@ -27,6 +27,7 @@ Haha
 
 <!-- Mission 2: this link works once you create projects/project-1.md -->
 - [My first project](projects/project-1.md)
+- [My second project](projects/project-2.md)
 
 ## Contact
 
